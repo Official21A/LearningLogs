@@ -57,3 +57,60 @@ p.s. To see if your server is running, open a browser tab and enter https://loca
 
 # Defining models
 All of the Objects that we want to use in our web-app should be defined in "/models.py".
+We write our classes in this file then we need to active and migrate them, so we can use them in our app.
+After creating them we go to "/settings.py" and in the INSTALLED_APPS list we add our project name.
+Then we save it and we migrate the project by these following commands:
+
+$ >> python OR python3 manage.py makemigrations project:name
+
+$ >> python OR python3 manage.py migrate
+
+Now that we migrate our models we need to register them with the admin site.
+First we create an admin for our site with following command:
+
+$>> python OR python3 manage.py createsuperuser
+
+The following command will create a "/admin.py" file for us. Open it and add import your models, then write:
+
+admin.site.register(Class:name)
+
+Now if you enter https://localhost:8000/admin/ you can see your registerd classes with admin.
+So each time we add a new class for the web-app we do the following steps:
+
+1.Modify the models.py
+
+2.manage.py makemigration project:name
+
+3.manage.py migrate
+
+4.Register in "/admin.py"
+
+# Shell
+Django has a shell mode for the web-apps where you can test the app without actually opening browser or ....
+Just enter:
+
+$ >> python OR python3 manage.py shell
+
+And for quiting enter ctrl+D.
+
+# Users
+Like the admin, the users need some source files.
+We create them by entering the following command:
+
+$ >> python OR python3 manage.py startapp users
+
+This will create the users folders for us to manage the web-app users.
+Again we need to go to the "/settings.py" and add the following folder to the INSTALLED_APPS list.
+
+# Finally
+So the base part of the project is done here, rest is just connected to the usage of your web-app.
+These steps will lead you to create the basics for a web-app and the rest is just depends on you.
+
+# Project-Explain
+In this project we have a site that users can come and Register or maybe Logging in. Then they can access their own
+special data, manage them and log out.
+For the web pages I used Bootstrap4 and the sql data base. Easy to use and easy to setup.
+
+Thank you.
+
+Contact me at : najafizadeh21@gmail.com
