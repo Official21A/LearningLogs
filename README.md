@@ -20,22 +20,30 @@ python OR python3 -m venv lib:name
 This will help you manage libraries needed for project and will let you easily find theme with
 a single commandl line:
 
-``` pip OR pip3 freeze > output.txt ```
+``` 
+pip OR pip3 freeze > output.txt 
+```
 
 The following command will get all of the external libraries you used for the project and will save
 them into "/output.txt".
 After you create your library you have to activate it via:
 
-``` source lib:name/bin/activate ```
+``` 
+source lib:name/bin/activate 
+```
 
 And we your done just enter:
 
-``` deactivate ```
+``` 
+deactivate 
+```
 
 # Creation
 To let the django start we use following command-line:
 
-``` django-admin startproject project:name . ```
+```
+django-admin startproject project:name . 
+```
 
 # Data base
 Each web-app uses a data base of its own the is not human readable
@@ -46,14 +54,18 @@ back to default.
 
 For creating a data base file enter following command-line:
 
-``` python OR python3 manage.py migrate ```
+``` 
+python OR python3 manage.py migrate 
+```
 
 # Running local server
 Django uses your own system as a server for itself. You can manully put your web-app into an online server (like Heroka)
 to let anyone access to your web-app via URL.
 To run a local server enter following command-line:
 
-``` python OR python3 manage.py runserver ```
+``` 
+python OR python3 manage.py runserver 
+```
 
 p.s. To see if your server is running, open a browser tab and enter https://localhost:8000/ or https://127.0.0.1:8000/
 
@@ -71,7 +83,9 @@ python OR python3 manage.py migrate
 Now that we migrate our models we need to register them with the admin site.
 First we create an admin for our site with following command:
 
-``` python OR python3 manage.py createsuperuser ```
+``` 
+python OR python3 manage.py createsuperuser 
+```
 
 The following command will create a "/admin.py" file for us. Open it and add import your models, then write:
 
@@ -92,7 +106,9 @@ So each time we add a new class for the web-app we do the following steps:
 Django has a shell mode for the web-apps where you can test the app without actually opening browser or ....
 Just enter:
 
-``` python OR python3 manage.py shell ```
+```
+python OR python3 manage.py shell 
+```
 
 And for quiting enter ctrl+D.
 
@@ -100,7 +116,9 @@ And for quiting enter ctrl+D.
 Like the admin, the users need some source files.
 We create them by entering the following command:
 
-``` python OR python3 manage.py startapp users ```
+``` 
+python OR python3 manage.py startapp users 
+```
 
 This will create the users folders for us to manage the web-app users.
 Again we need to go to the "/settings.py" and add the following folder to the INSTALLED_APPS list.
